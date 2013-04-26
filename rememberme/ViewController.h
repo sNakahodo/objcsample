@@ -8,6 +8,18 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController {
+    /*
+    IBOutlet UITextField *whoText;
+    IBOutlet UITextField *whatText;
+     */
+}
+@property (retain, nonatomic) IBOutlet UITextField *whoText;
+@property (retain, nonatomic) IBOutlet UITextField *whatText;
+@property (retain, nonatomic) IBOutlet UITextField *howMuchText;
+@property (retain, nonatomic) UIMenuController *menuController;
+-(IBAction) afterWhoEdit:(id)sender;
+-(IBAction) afterWhatEdit:(id)sender;
+-(IBAction) afterHowMuchEdit:(id)sender;
 
 @end
