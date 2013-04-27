@@ -13,7 +13,7 @@
 @end
 
 @implementation ViewController
-@synthesize whoText, whatText, howMuchText, menuController;
+@synthesize whoText, whatText, howMuchText, menuController, scroll, pageControl;
 
 - (void)viewDidLoad
 {
@@ -22,8 +22,35 @@
     
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-
     
+    self.scroll.delegate = self;
+    self.scroll.contentSize = CGSizeMake(900, 100);
+    
+    UIButton *b1 = [[UIButton alloc] initWithFrame:CGRectMake(50, 10, 200, 100)];
+    UIButton *b2 = [[UIButton alloc] initWithFrame:CGRectMake(350, 10, 200, 100)];
+    UIButton *b3 = [[UIButton alloc] initWithFrame:CGRectMake(650, 10, 200, 100)];
+    
+    b1.backgroundColor = [UIColor redColor];
+    b2.backgroundColor = [UIColor greenColor];
+    b3.backgroundColor = [UIColor blueColor];
+    
+    
+    
+    [self.scroll addSubview:b1];
+    [self.scroll addSubview:b2];
+    [self.scroll addSubview:b3];
+    
+}
+
+-(void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    CGFloat pageWidth = self.scroll.frame.size.width;
+    float fractionalPage = self.scroll.contentOffset.x / pageWidth;
+    NSInteger page = lround(fractionalPage);
+    self.pageControl.currentPage = page;
+}
+
+-(void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView{
+    NSLog(@"scroll stopped");
 }
 
 - (IBAction) afterWhoEdit:(id)sender
@@ -95,4 +122,7 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)dealloc {
+    [super dealloc];
+}
 @end

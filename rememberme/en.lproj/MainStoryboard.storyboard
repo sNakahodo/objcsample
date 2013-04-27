@@ -61,7 +61,8 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="de9-uh-W5O">
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="112" id="AGA-cJ-PM5"/>
+                                    <constraint firstAttribute="height" constant="27" id="Wkc-jf-bNc"/>
+                                    <constraint firstAttribute="width" constant="155" id="vhE-kf-6ZU"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="OK">
@@ -72,29 +73,54 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Gm-ca-h3s">
+                                <subviews>
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceHorizontal="YES" pagingEnabled="YES" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GFK-xu-Qe6">
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    </scrollView>
+                                    <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="qez-Mh-eyn">
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    </pageControl>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="qez-Mh-eyn" secondAttribute="bottom" constant="9" id="1FZ-Ml-5sE"/>
+                                    <constraint firstItem="GFK-xu-Qe6" firstAttribute="leading" secondItem="5Gm-ca-h3s" secondAttribute="leading" constant="7" id="3Cr-pW-9qA"/>
+                                    <constraint firstItem="qez-Mh-eyn" firstAttribute="centerX" secondItem="GFK-xu-Qe6" secondAttribute="centerX" type="default" id="C7I-HD-YxY"/>
+                                    <constraint firstItem="GFK-xu-Qe6" firstAttribute="top" secondItem="5Gm-ca-h3s" secondAttribute="top" constant="20" symbolic="YES" type="default" id="W0Z-Ib-0jp"/>
+                                    <constraint firstItem="qez-Mh-eyn" firstAttribute="centerX" secondItem="5Gm-ca-h3s" secondAttribute="centerX" type="default" id="Zp8-1l-3a0"/>
+                                    <constraint firstAttribute="bottom" secondItem="GFK-xu-Qe6" secondAttribute="bottom" constant="64" id="cg9-pf-xkI"/>
+                                    <constraint firstAttribute="width" constant="315" id="g5C-vV-e5r"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="L5y-fm-O3L" firstAttribute="top" secondItem="3" secondAttribute="top" constant="249" id="083-c3-OZO"/>
-                            <constraint firstItem="al8-XI-Gxj" firstAttribute="leading" secondItem="XPb-MG-KdR" secondAttribute="leading" type="default" id="1iq-4v-btR"/>
-                            <constraint firstItem="XPb-MG-KdR" firstAttribute="top" secondItem="ihz-Ca-K2G" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="2UQ-JK-n99"/>
-                            <constraint firstAttribute="bottom" secondItem="de9-uh-W5O" secondAttribute="bottom" constant="105" id="67z-Lo-pW1"/>
-                            <constraint firstItem="eOy-r1-JwP" firstAttribute="centerX" secondItem="3" secondAttribute="centerX" type="default" id="6CI-It-5B1"/>
-                            <constraint firstItem="de9-uh-W5O" firstAttribute="centerX" secondItem="L5y-fm-O3L" secondAttribute="centerX" type="default" id="7Ho-Yy-GvL"/>
+                            <constraint firstItem="XPb-MG-KdR" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="73" id="2Yr-Wh-cwq"/>
+                            <constraint firstItem="eOy-r1-JwP" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="134" id="EdF-1g-Xmu"/>
+                            <constraint firstItem="5Gm-ca-h3s" firstAttribute="top" secondItem="3" secondAttribute="top" constant="200" id="El4-Os-gdk"/>
+                            <constraint firstItem="L5y-fm-O3L" firstAttribute="centerX" secondItem="bwP-R9-LfY" secondAttribute="centerX" type="default" id="FB6-kG-FMv"/>
+                            <constraint firstItem="al8-XI-Gxj" firstAttribute="top" secondItem="3" secondAttribute="top" constant="92" id="FL6-nS-wQ1"/>
+                            <constraint firstItem="ihz-Ca-K2G" firstAttribute="top" secondItem="3" secondAttribute="top" type="default" id="GAy-Fg-j5M"/>
+                            <constraint firstAttribute="bottom" secondItem="de9-uh-W5O" secondAttribute="bottom" constant="5" id="Hcg-40-ZjB"/>
                             <constraint firstItem="L5y-fm-O3L" firstAttribute="leading" secondItem="al8-XI-Gxj" secondAttribute="leading" type="default" id="I3s-hA-kkj"/>
-                            <constraint firstItem="bwP-R9-LfY" firstAttribute="centerX" secondItem="ihz-Ca-K2G" secondAttribute="centerX" type="default" id="I9R-aE-M2z"/>
-                            <constraint firstItem="al8-XI-Gxj" firstAttribute="centerX" secondItem="eOy-r1-JwP" secondAttribute="centerX" type="default" id="K1q-8a-g6Q"/>
-                            <constraint firstItem="al8-XI-Gxj" firstAttribute="top" secondItem="3" secondAttribute="top" constant="148" id="Mef-wq-bjQ"/>
-                            <constraint firstItem="ihz-Ca-K2G" firstAttribute="top" secondItem="3" secondAttribute="top" constant="15" id="YJb-Td-hfd"/>
+                            <constraint firstItem="5Gm-ca-h3s" firstAttribute="centerX" secondItem="3" secondAttribute="centerX" type="default" id="KiZ-EP-ALj"/>
+                            <constraint firstItem="XPb-MG-KdR" firstAttribute="leading" secondItem="al8-XI-Gxj" secondAttribute="leading" type="default" id="N12-HG-gRA"/>
                             <constraint firstItem="L5y-fm-O3L" firstAttribute="trailing" secondItem="al8-XI-Gxj" secondAttribute="trailing" type="default" id="Zdh-W9-LrG"/>
-                            <constraint firstItem="ihz-Ca-K2G" firstAttribute="leading" secondItem="eOy-r1-JwP" secondAttribute="leading" type="default" id="aYq-aT-02h"/>
-                            <constraint firstItem="eOy-r1-JwP" firstAttribute="top" secondItem="3" secondAttribute="top" constant="111" id="dwt-dn-nGx"/>
-                            <constraint firstItem="al8-XI-Gxj" firstAttribute="trailing" secondItem="XPb-MG-KdR" secondAttribute="trailing" type="default" id="mOA-Jn-HWY"/>
-                            <constraint firstItem="bwP-R9-LfY" firstAttribute="top" secondItem="3" secondAttribute="top" constant="206" id="slN-aJ-T3f"/>
+                            <constraint firstItem="XPb-MG-KdR" firstAttribute="top" secondItem="3" secondAttribute="top" constant="30" id="aBN-T6-Cvg"/>
+                            <constraint firstItem="ihz-Ca-K2G" firstAttribute="centerX" secondItem="de9-uh-W5O" secondAttribute="centerX" type="default" id="aek-bl-0gn"/>
+                            <constraint firstItem="XPb-MG-KdR" firstAttribute="trailing" secondItem="al8-XI-Gxj" secondAttribute="trailing" type="default" id="bBx-eQ-pUh"/>
+                            <constraint firstItem="de9-uh-W5O" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="86" id="dTF-JF-LDR"/>
+                            <constraint firstItem="bwP-R9-LfY" firstAttribute="top" secondItem="al8-XI-Gxj" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="gey-dE-rLR"/>
+                            <constraint firstItem="L5y-fm-O3L" firstAttribute="top" secondItem="3" secondAttribute="top" constant="152" id="kfj-kV-Xfb"/>
+                            <constraint firstItem="eOy-r1-JwP" firstAttribute="top" secondItem="XPb-MG-KdR" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="nqw-DR-eFe"/>
+                            <constraint firstItem="de9-uh-W5O" firstAttribute="top" secondItem="5Gm-ca-h3s" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="wxO-P5-HoN"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="howMuchText" destination="L5y-fm-O3L" id="qyX-eO-Lt2"/>
+                        <outlet property="pageControl" destination="qez-Mh-eyn" id="FSh-pn-BfE"/>
+                        <outlet property="scroll" destination="GFK-xu-Qe6" id="TNk-hX-Fg8"/>
                         <outlet property="whatText" destination="al8-XI-Gxj" id="CzI-dk-PAh"/>
                         <outlet property="whoText" destination="XPb-MG-KdR" id="vhY-LT-nBo"/>
                     </connections>
@@ -158,6 +184,8 @@
                 <relationship kind="action" name="autoComplete:"/>
                 <relationship kind="action" name="onHowMuchEdit:"/>
                 <relationship kind="outlet" name="howMuchText" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="pageControl" candidateClass="UIPageControl"/>
+                <relationship kind="outlet" name="scroll" candidateClass="UIScrollView"/>
                 <relationship kind="outlet" name="whatText" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="whoText" candidateClass="UITextField"/>
             </relationships>

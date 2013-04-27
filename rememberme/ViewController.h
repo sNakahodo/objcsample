@@ -8,7 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController {
+@interface ViewController : UIViewController
+<UIScrollViewDelegate>
+{
     /*
     IBOutlet UITextField *whoText;
     IBOutlet UITextField *whatText;
@@ -21,5 +23,7 @@
 -(IBAction) afterWhoEdit:(id)sender;
 -(IBAction) afterWhatEdit:(id)sender;
 -(IBAction) afterHowMuchEdit:(id)sender;
+@property (retain, nonatomic) IBOutlet UIScrollView *scroll;
+@property (retain, nonatomic) IBOutlet UIPageControl *pageControl;
 
 @end
